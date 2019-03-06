@@ -2,7 +2,7 @@
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/BootstrapMan`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
+You don't need to customize the stylesheets manually, the only gem you need is the `BootstrapMan`
 
 ## Installation
 
@@ -22,7 +22,32 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Installing the CSS stylesheets
+
+After running `bundle install`, run the generator:
+
+    rails generate bootstrap:install
+
+This command will create required asset files and update your application layout.
+
+## Generating layouts and views
+
+You can run following generators to get started with Bootstrap quickly.
+
+Strapify (generates Bootstrap compatible scaffold views.) - (Haml and Slim supported)
+
+Usage:
+
+    rails g bootstrap:strapify [RESOURCE_NAME]
+
+
+Example:
+
+    rails g scaffold Post title:string description:text
+    rake db:migrate
+    rails g bootstrap:themed Posts
+
+Notice the plural usage of the resource to generate bootstrap:strapify.
 
 ## Development
 
