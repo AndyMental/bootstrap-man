@@ -9,12 +9,12 @@ You don't need to customize the stylesheets manually, the only gem you need is t
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'BootstrapMan', '~> 0.1.2'
+gem 'BootstrapMan', '~> 0.1.3'
 ```
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
 Or install it yourself as:
 
@@ -45,9 +45,19 @@ Example:
 
     rails g scaffold Post title:string description:text
     rake db:migrate
-    rails g bootstrap:themed Posts
+    rails g bootstrap:strapify Posts
 
 Notice the plural usage of the resource to generate bootstrap:strapify.
+
+## Rails Server
+
+Run bundle install before running Rails Server. Gem Install step has added few Gems to the end of Gemfile for ease.
+
+Gems Added:
+    gem 'jquery-rails'
+    gem 'bootstrap'
+    gem 'font-awesome-rails'
+    gem 'bootstrap_form'
 
 ## Development
 

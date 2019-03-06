@@ -43,7 +43,7 @@ module Bootstrap
         template "_navbar.html.#{ext}", "app/views/shared/_navbar.html.#{ext}"
         template "_footer.html.#{ext}", "app/views/shared/_footer.html.#{ext}"
 
-        insert_into_file "Gemfile", "# Adding gems required by BootstrapMan\ngem 'jquery-rails'\ngem 'bootstrap'\ngem 'font-awesome-rails'\ngem 'bootstrap_form'\n", :before => "end"
+        append_to_file "Gemfile", "# Adding gems required by BootstrapMan\ngem 'jquery-rails'\ngem 'bootstrap'\ngem 'font-awesome-rails'\ngem 'bootstrap_form'\n"
       end
     end
   end
