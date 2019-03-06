@@ -7,7 +7,8 @@ module Bootstrap
 
       attr_reader :app_name
 
-      def add_assets
+      def setup
+        # Adding Templates
         js_manifest = 'app/assets/javascripts/application.js'
 
         if File.exist?(js_manifest)
@@ -34,12 +35,15 @@ module Bootstrap
           copy_file "bootstrap_forms.scss", "app/assets/stylesheets/bootstrap_forms.scss"
         end
 
+        # Adding Templates
         app = ::Rails.application
         @app_name = app.class.to_s.split("::").first
         ext = app.config.generators.options[:rails][:template_engine] || :erb
         template "layout.html.#{ext}", "app/views/layouts/application.html.#{ext}"
         template "_navbar.html.#{ext}", "app/views/shared/_navbar.html.#{ext}"
         template "_footer.html.#{ext}", "app/views/shared/_footer.html.#{ext}"
+
+        insert_into_file "Gemfile", "# Adding gems required by BootstrapMan\ngem 'jquery-rails'\ngem 'bootstrap'\ngem 'font-awesome-rails'\ngem 'bootstrap_form'\n", :before => "end"
       end
     end
   end
