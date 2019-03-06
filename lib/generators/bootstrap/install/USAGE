@@ -1,0 +1,13 @@
+Description:
+    This will deploy required Bootstrap Assets and Update Application Layout File
+
+Example:
+    rails generate bootstrap:install
+
+    This will create:
+        app/assets/stylesheets/application.scss
+        app/assets/stylesheets/bootstrap_forms.scss
+        app/assets/javascripts/application.js
+        app/views/layouts/application.html.erb
+        app/views/layouts/shared/_navbar.html.erb
+        app/views/layouts/shared/_footer.html.erb

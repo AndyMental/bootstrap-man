@@ -1,0 +1,11 @@
+Description:
+    This generator will updated all the files for given controller without form.
+
+Example:
+    rails generate bootstrap:strapify things
+
+    This will update:
+        app/views/things/index.html.erb
+        app/views/things/edit.html.erb
+        app/views/things/new.html.erb
+        app/views/things/show.html.erb
