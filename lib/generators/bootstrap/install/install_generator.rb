@@ -45,6 +45,7 @@ module Bootstrap
         template "_footer.html.#{ext}", "app/views/shared/_footer.html.#{ext}"
         template "_notices.html.#{ext}", "app/views/shared/_notices.html.#{ext}"
         template "_devise.html.#{ext}", "app/views/shared/_devise.html.#{ext}"
+        copy_file "application_helper.rb", "app/helpers/application_helper.rb"
 
         # Adding Templates Folder for future Generators
         copy_file "_form.html.erb", "lib/templates/erb/scaffold/_form.html.erb"
