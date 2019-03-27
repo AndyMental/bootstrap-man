@@ -9,7 +9,7 @@ You don't need to customize the stylesheets manually, the only gem you need is t
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'BootstrapMan', '~> 0.1.4'
+gem 'BootstrapMan', '~> 0.1.6'
 ```
 
 And then execute:
@@ -58,6 +58,11 @@ Gems Added:
     gem 'bootstrap'
     gem 'font-awesome-rails'
     gem 'bootstrap_form'
+
+## TODO
+
+- Add template versions for HAML and SLIM
+- Add webpacker setup when rails 6 in use
 
 ## Development
 

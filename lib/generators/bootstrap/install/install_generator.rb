@@ -40,8 +40,11 @@ module Bootstrap
         @app_name = app.class.to_s.split("::").first
         ext = app.config.generators.options[:rails][:template_engine] || :erb
         template "layout.html.#{ext}", "app/views/layouts/application.html.#{ext}"
+        template "_head.html.#{ext}", "app/views/shared/_head.html.#{ext}"
         template "_navbar.html.#{ext}", "app/views/shared/_navbar.html.#{ext}"
         template "_footer.html.#{ext}", "app/views/shared/_footer.html.#{ext}"
+        template "_notices.html.#{ext}", "app/views/shared/_notices.html.#{ext}"
+        template "_devise.html.#{ext}", "app/views/shared/_devise.html.#{ext}"
 
         # Adding Templates Folder for future Generators
         copy_file "_form.html.erb", "lib/templates/erb/scaffold/_form.html.erb"
