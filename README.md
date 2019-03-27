@@ -9,7 +9,7 @@ You don't need to customize the stylesheets manually, the only gem you need is t
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'BootstrapMan', '~> 0.1.6'
+gem 'BootstrapMan', '~> 0.1.7'
 ```
 
 And then execute:
