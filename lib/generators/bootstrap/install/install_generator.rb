@@ -8,7 +8,7 @@ module Bootstrap
       attr_reader :app_name
 
       def setup
-        # Adding Templates
+        # Adding Assets
         js_manifest = 'app/assets/javascripts/application.js'
 
         if File.exist?(js_manifest)
@@ -42,6 +42,9 @@ module Bootstrap
         template "layout.html.#{ext}", "app/views/layouts/application.html.#{ext}"
         template "_navbar.html.#{ext}", "app/views/shared/_navbar.html.#{ext}"
         template "_footer.html.#{ext}", "app/views/shared/_footer.html.#{ext}"
+
+        # Adding Templates Folder for future Generators
+        directory 'lib', 'lib/templates'
 
         append_to_file "Gemfile", "# Adding gems required by BootstrapMan\ngem 'jquery-rails'\ngem 'bootstrap'\ngem 'font-awesome-rails'\ngem 'bootstrap_form'\n"
       end
