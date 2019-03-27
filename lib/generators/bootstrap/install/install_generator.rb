@@ -44,8 +44,11 @@ module Bootstrap
         template "_footer.html.#{ext}", "app/views/shared/_footer.html.#{ext}"
 
         # Adding Templates Folder for future Generators
-        byebug
-        directory 'lib/templates', 'lib'
+        copy_file "_form.html.erb", "lib/templates/erb/scaffold/_form.html.erb"
+        copy_file "edit.html.erb", "lib/templates/erb/scaffold/edit.html.erb"
+        copy_file "index.html.erb", "lib/templates/erb/scaffold/index.html.erb"
+        copy_file "new.html.erb", "lib/templates/erb/scaffold/new.html.erb"
+        copy_file "show.html.erb", "lib/templates/erb/scaffold/show.html.erb"
 
         append_to_file "Gemfile", "# Adding gems required by BootstrapMan\ngem 'jquery-rails'\ngem 'bootstrap'\ngem 'font-awesome-rails'\ngem 'bootstrap_form'\n"
       end
