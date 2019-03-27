@@ -44,7 +44,7 @@ module Bootstrap
         template "_footer.html.#{ext}", "app/views/shared/_footer.html.#{ext}"
 
         # Adding Templates Folder for future Generators
-        directory 'lib', 'lib/templates'
+        directory 'lib/templates', 'lib'
 
         append_to_file "Gemfile", "# Adding gems required by BootstrapMan\ngem 'jquery-rails'\ngem 'bootstrap'\ngem 'font-awesome-rails'\ngem 'bootstrap_form'\n"
       end
